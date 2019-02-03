@@ -1,7 +1,7 @@
 {
-  "name": "matchupwikicms",
+  "name": "ekkomatchupwiki",
   "version": "1.0.0",
-  "description": "matchupwikicms",
+  "description": "Ekko Matchup Wiki",
   "author": "Badgy_",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/toast": "^3.0.2",
     "cross-env": "^5.2.0",
     "firebase": "^5.8.2",
     "nuxt": "^2.3.4",
