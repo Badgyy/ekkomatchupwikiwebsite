@@ -9,7 +9,7 @@
           class="white--text"
           absolute
           height="550px"
-          :src="'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + $route.params.id + '_0.jpg'"
+          :src="'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + $route.params.id + '_0.jpg'"
         ></v-img>
 
         <v-container>
@@ -145,7 +145,6 @@ async asyncData ({app, route}) {
   },
   methods: {
       saveChanges () {
-          console.log(this.champupdated)
           this.$fireStore.collection('matchups').doc(this.$route.params.id.toLowerCase()).update({
               ...this.champupdated
           }).then(() => {

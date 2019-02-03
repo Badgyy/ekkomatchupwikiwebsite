@@ -1,7 +1,7 @@
 <template>
   <div id="index">
     <v-container>
-      <img @click="goToRoute('/' + champ.id)" v-for="champ in champs" :key="champ.id" :src="'http://ddragon.leagueoflegends.com/cdn/9.2.1/img/champion/' + champ.id + '.png'">
+      <img @click="goToRoute('/' + champ.id)" v-for="champ in champs" :key="champ.id" :src="'https://ddragon.leagueoflegends.com/cdn/9.2.1/img/champion/' + champ.id + '.png'">
     </v-container>
 
 
@@ -27,7 +27,7 @@
 <script>
 export default {
   async asyncData ({$axios}) {
-    let champs = await $axios.$get('http://ddragon.leagueoflegends.com/cdn/9.2.1/data/en_US/champion.json')
+    let champs = await $axios.$get('https://ddragon.leagueoflegends.com/cdn/9.2.1/data/en_US/champion.json')
     return { champs: champs.data }
 
   },
@@ -44,7 +44,7 @@ export default {
   methods: {
     goToRoute(path) {
       this.$router.push(path)
-      const imageUrl = "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + this.$route.params.id + "_0.jpg"
+      const imageUrl = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + this.$route.params.id + "_0.jpg"
       this.dialog = true
     },
 
